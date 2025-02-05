@@ -1,7 +1,8 @@
 import axios from "axios";
 
+
 const instance = axios.create({
-  baseURL: "http://localhost:5013",
+  baseURL: process.env.NET_APP_API_URL,
 });
 
 instance.interceptors.response.use(

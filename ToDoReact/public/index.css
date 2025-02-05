@@ -84,7 +84,7 @@ input[type="checkbox"] {
         -ms-text-rendering: optimizeLegibility;
         -o-text-rendering: optimizeLegibility;
         text-rendering: optimizeLegibility;
-    }
+    } */
 
 #header {
     padding-top: 15px;
@@ -158,7 +158,7 @@ label[for='toggle-all'] {
     left: -4px;
     width: 40px;
     text-align: center;
-    /* Mobile Safari */
+    /* Mobile Safari*/
     border: none;
 }
 
@@ -290,7 +290,7 @@ label[for='toggle-all'] {
 
         #todo-list li.editing:last-child {
             margin-bottom: -1px;
-        }
+        } */
 
 #footer {
     color: #777;
@@ -461,11 +461,11 @@ hr {
     margin-bottom: 0;
 }
 
-.quote {
+ .quote {
     border: none;
     margin: 20px 0 60px 0;
 }
-
+ 
     .quote p {
         font-style: italic;
     }
@@ -501,7 +501,7 @@ hr {
         .quote footer a {
             margin-left: 5px;
             vertical-align: middle;
-        }
+        } 
 
 .speech-bubble {
     position: relative;
@@ -533,7 +533,7 @@ hr {
     transition-duration: 500ms;
 }
 
-@media (min-width: 899px) {
+ @media (min-width: 899px) {
     .learn-bar {
         width: auto;
         margin: 0 0 0 300px;
@@ -547,7 +547,7 @@ hr {
             width: 550px;
             margin: 130px auto 40px auto;
         }
-}
+} 
 
 
 html,
@@ -593,7 +593,7 @@ body {
     display: none;
 }
 
-.todoapp {
+ .todoapp {
     background: #fff;
     margin: 130px 0 40px 0;
     position: relative;
@@ -630,9 +630,9 @@ body {
         -webkit-text-rendering: optimizeLegibility;
         -moz-text-rendering: optimizeLegibility;
         text-rendering: optimizeLegibility;
-    }
+    } */
 
-.new-todo,
+ .new-todo,
 .edit {
     position: relative;
     margin: 0;
@@ -656,7 +656,7 @@ body {
     border: none;
     background: rgba(0, 0, 0, 0.003);
     box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
-}
+} */
 
 .main {
     position: relative;
