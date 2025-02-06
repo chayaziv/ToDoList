@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import service from "./service.js";
-const eee = process.env;
-console.log({ eee });
+
+console.log(process.env);
 function App() {
   const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useState([]);

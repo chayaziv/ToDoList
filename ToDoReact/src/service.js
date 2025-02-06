@@ -1,17 +1,15 @@
 import axios from "axios";
 
-
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: `https://${process.env.REACT_APP_API_DOMAIN}`,
 });
-console.log("API URL:", process.env.REACT_APP_API_URL); 
 
 instance.interceptors.response.use(
   (response) => {
     return response;
   },
   (error) => {
-    console.log("bsd")
+    console.log("bsd");
     console.log("API Error:", error.response || error.message || error);
 
     if (!error.response) {
