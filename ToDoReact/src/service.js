@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-  baseURL: process.env.NET_APP_API_URL,
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 instance.interceptors.response.use(
@@ -10,6 +10,7 @@ instance.interceptors.response.use(
     return response;
   },
   (error) => {
+    console.log("bsd")
     console.log("API Error:", error.response || error.message || error);
 
     if (!error.response) {
