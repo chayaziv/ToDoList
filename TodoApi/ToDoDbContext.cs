@@ -16,16 +16,17 @@ public partial class ToDoDbContext : DbContext
     {
     }
 
-    public virtual DbSet<TodoApi.Task> Tasks { get; set; }
+    public virtual DbSet<Task> Tasks { get; set; }
 
-   
+    public virtual DbSet<User> Users { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder
-            .UseCollation("utf8mb4_0900_ai_ci")
-            .HasCharSet("utf8mb4");
+            .UseCollation("utf8_general_ci")
+            .HasCharSet("utf8");
 
-        modelBuilder.Entity<TodoApi.Task>(entity =>
+        modelBuilder.Entity<Task>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
@@ -36,6 +37,16 @@ public partial class ToDoDbContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
                 .HasColumnName("name");
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.HasIndex(e => e.Username, "Username").IsUnique();
+
+            entity.Property(e => e.Password).HasMaxLength(255);
+            entity.Property(e => e.Username).HasMaxLength(100);
         });
 
         OnModelCreatingPartial(modelBuilder);
