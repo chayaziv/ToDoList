@@ -50,7 +50,7 @@ export default function Login() {
               name="username"
               autoComplete="username"
               autoFocus
-              //value={username}
+           
               onChange={(event) => setUsername(event.target.value)}
               InputProps={{
                 startAdornment: (
@@ -69,7 +69,7 @@ export default function Login() {
               type={showPassword ? "text" : "password"}
               id="password"
               autoComplete="current-password"
-              //value={password}
+           
               onChange={(event) => setPassword(event.target.value)}
               InputProps={{
                 startAdornment: (

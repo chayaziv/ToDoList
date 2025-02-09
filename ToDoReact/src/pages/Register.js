@@ -55,7 +55,7 @@ export default function Register() {
               name="username"
               autoComplete="username"
               autoFocus
-              //value={username}
+         
               onChange={(event) => setUsername(event.target.value)}
               InputProps={{
                 startAdornment: (
@@ -74,7 +74,7 @@ export default function Register() {
               type={showPassword ? "text" : "password"}
               id="password"
               autoComplete="new-password"
-              //value={password}
+      
               onChange={(event) => setPassword(event.target.value)}
               InputProps={{
                 startAdornment: (

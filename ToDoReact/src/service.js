@@ -1,10 +1,10 @@
-
 import axios from "axios";
 
 const instance = axios.create({
   baseURL: `https://${process.env.REACT_APP_API_DOMAIN}`,
 });
 
+console.log(process.env);
 
 instance.interceptors.response.use(
   (response) => {
@@ -58,7 +58,6 @@ export default {
     return { id };
   },
 
-
   login: async (username, password) => {
     const response = await instance.post(`/login`, { username, password });
     const { token } = response.data;
@@ -73,7 +72,6 @@ export default {
     saveAccessToken({ token });
     return token;
   },
-
 
   logout: () => {
     localStorage.removeItem("access_token");
