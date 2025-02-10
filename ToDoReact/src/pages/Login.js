@@ -28,6 +28,7 @@ export default function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await service.login(username, password);
+    navigate("/todos");
   };
 
   return (

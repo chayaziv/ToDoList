@@ -29,9 +29,8 @@ export default function Register() {
     event.preventDefault();
     try {
       const result = await service.register(username, password);
-      console.log("Registered successfully", result);
+      navigate("/todos");
     } catch (error) {
-      console.error("Register failed", error);
     }
   };
 
